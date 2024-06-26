@@ -1,5 +1,5 @@
-from src.services.json_manip import Json_manip
 from src.services.path_exists import *
+from src.usecases.create_user import create_user
 
 def register(db_path: str):
     while True:
@@ -12,4 +12,9 @@ def register(db_path: str):
             continue
         
         password = input("Password -> ")
-        game_class = input("Class: [1] Warrior [2] Mage -> ")
+        
+        create_user(os.path.join(db_path, f"{user}.json"), user, password)
+        
+        os.system("clear")
+        
+        break

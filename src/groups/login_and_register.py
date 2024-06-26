@@ -1,17 +1,25 @@
 from src.usecases.login import login
+from src.usecases.register import register
+import os
+from time import sleep
 
 def login_and_register(db_path: str) -> dict:    
+    while True:    
+        
+        os.system("clear")
+        
         res = input("[1] LOGIN [2] REGISTER -> ")
         
         if res == "1": 
-            return login(db_path)
-                    
-        elif res == "2": #se escolher registrar:
-            user = input("Username -> ")
+            os.system("clear")
+            info = login(db_path)
+            print("Login successful!")
+            sleep(3)
+            return info
             
-            raise NotImplementedError
-                #pedir usuario
-                #se usuario nao existir:
-                    #pedir uma senha
-                    #pedir a classe
-                    #criar o arquivo json com o nome do usuario
+        elif res == "2": 
+            os.system("clear")
+            register(db_path)
+            print("User created!")
+            sleep(3)
+            continue

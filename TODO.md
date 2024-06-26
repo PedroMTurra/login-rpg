@@ -1,4 +1,4 @@
-LOGIN AND REGISTER SYSTEM (WIP):
+LOGIN AND REGISTER SYSTEM (DONE):
 - I'll make this system using a simple json file for each user, which will be located at src/users
 - In each file, informations like username, password, game class, health points, etc will be stored
 - To verify if a certain username already exists, I'll just make a function to see if a file with that name is already created. If it is, the program will ask for another username
