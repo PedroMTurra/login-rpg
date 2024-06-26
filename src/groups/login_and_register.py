@@ -7,6 +7,8 @@ def login_and_register(db_path: str) -> dict:
             return login(db_path)
                     
         elif res == "2": #se escolher registrar:
+            user = input("Username -> ")
+            
             raise NotImplementedError
                 #pedir usuario
                 #se usuario nao existir:

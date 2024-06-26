@@ -9,3 +9,10 @@ class Json_manip:
             file.close()
             
         return info
+    
+    def write_in_json(json_path: str, player_info: dict) -> None:
+        
+        with open(json_path, "w") as file:
+            
+            file.write(json.dumps(player_info, indent=3))
+            file.close()
