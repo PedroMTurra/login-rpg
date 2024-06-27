@@ -1,8 +1,9 @@
 {
-    "username": "teste",
-    "password": "teste123",
-    "class": "warrior",
-    "hp": 12,
-    "mana": 10,
-    "round": 1
+   "username": "test",
+   "password": "teste123",
+   "class": "warrior",
+   "hp": 20,
+   "mana": 15,
+   "round": 2,
+   "monster_hp": 30
 }

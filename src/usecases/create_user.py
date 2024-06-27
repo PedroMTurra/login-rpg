@@ -1,9 +1,7 @@
 from random import randint
-from src.services.json_manip import Json_manip
+from src.services.json_manip import JsonManip
 
-json_manip = Json_manip
-
-def create_user(json_path: str, user: str, password: str):
+def create_user(json_manip: JsonManip, json_path: str, user: str, password: str):
     res = input("Class: [1] Warrior [2] Mage -> ")
         
     if res == "1":
@@ -21,7 +19,8 @@ def create_user(json_path: str, user: str, password: str):
         "class": game_class,
         "hp": hp,
         "mana": mana,
-        "round": 1
+        "round": 1,
+        "monster_hp": 20
     }
     
-    json_manip.write_in_json(json_path, model)
+    json_manip.write_in_json(model, json_path)

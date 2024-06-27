@@ -1,7 +1,7 @@
 from src.services.path_exists import *
-from src.services.json_manip import Json_manip
+from src.services.json_manip import JsonManip
 
-json_manip = Json_manip
+json_manip = JsonManip
 
 def login(db_path: str) -> dict:
     while True:

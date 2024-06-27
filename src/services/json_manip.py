@@ -1,6 +1,6 @@
 import json
 
-class Json_manip:
+class JsonManip:
     
     def get_json_info(json_path: str) -> dict:
         
@@ -10,7 +10,7 @@ class Json_manip:
             
         return info
     
-    def write_in_json(json_path: str, player_info: dict) -> None:
+    def write_in_json(self, player_info: dict, json_path: str) -> None:
         
         with open(json_path, "w") as file:
             
