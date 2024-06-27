@@ -2,8 +2,8 @@
    "username": "test",
    "password": "teste123",
    "class": "warrior",
-   "hp": 20,
+   "hp": 2,
    "mana": 15,
-   "round": 2,
-   "monster_hp": 30
+   "round": 3,
+   "monster_hp": 40
 }

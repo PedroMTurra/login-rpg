@@ -17,7 +17,13 @@ def game(p_actions: Player_actions, json_manip: JsonManip, json_path: str):
         
         print(f"Class: {player_class} | HP: {player_hp} | Mana: {player_mana} | Round: {player_round}\nMonster HP: {monster_hp}\n")
         
-        player_choices(p_actions, json_manip, json_path)
+        choice = player_choices(p_actions, json_manip, json_path)
+        
+        if not choice:
+            
+            p_actions.player_info["hp"] -= 3
+            print("The monster attacked you!")
+            sleep(2)
         
         if p_actions.player_info["hp"] <= 0:
             
@@ -33,6 +39,7 @@ def game(p_actions: Player_actions, json_manip: JsonManip, json_path: str):
             if res == "1":
                 os.system("clear")
                 print("Continuing to next round...")
+                sleep(2)
                 p_actions.player_info["round"] += 1
                 
                 p_actions.player_info["monster_hp"] = 10 + 10 * p_actions.player_info["round"]
@@ -49,6 +56,6 @@ def game(p_actions: Player_actions, json_manip: JsonManip, json_path: str):
                 p_actions.player_info["monster_hp"] = 10 + 10 * p_actions.player_info["round"]
                 
                 json_manip.write_in_json(p_actions.player_info, json_path)
+                os.system("clear")
                 print("Saved!")
-                sleep(2)
                 exit()
